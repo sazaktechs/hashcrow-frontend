@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Build artifacts
+dist/
+build/
+*.log
+
+# Environment-specific configuration files
+.env
+.env.local
+.env.*.local
+
+# Local development files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Other generated or temporary files
+.DS_Store
+Thumbs.db

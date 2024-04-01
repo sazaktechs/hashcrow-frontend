@@ -1,0 +1,52 @@
+<tr>
+                                          <th className="snapshot-version-header">Snapshot Version:</th><td>{counter}</td>
+                                       </tr>
+                                       <tr>
+                                          <th>Up-to-date: <span className="question-container">{question}
+                                             <span class="tooltiptext">This section indicates whether the content of this web page has changed since it was archived. You can verify the current state of this version by clicking the 'Up-to-date' button.</span>
+                                          </span></th><td>
+
+                                             {
+
+                                                (isLoading.Spinner2) ?
+
+                                                   <div className="spinner">
+                                                      <div className='color-ring'>
+                                                         <ColorRing
+                                                            visible={true}
+                                                            height="40"
+                                                            width="40"
+                                                            ariaLabel="blocks-loading"
+                                                            wrapperStyle={{}}
+                                                            wrapperclassName="blocks-wrapper"
+                                                            colors={['#04aa6d', '#04aa6d', '#04aa6d', '#04aa6d', '#04aa6d', /*'#f47e60', '#f8b26a', '#abbd81', '#849b87'*/]}
+                                                         />
+                                                      </div>
+
+                                                   </div>
+
+                                                   : null
+                                             }
+
+                                             {/* {old} */}
+
+                                             {
+                                                (isLoading.Spinner2) ? null : (<div>{(old === "Old!") ? <div className="xmark">{xmark}</div> : <div>
+                                                   {(old === "up-to-date") ? <div className='check'>{check}</div> : <div>
+                                                      {(old === "empty") ? <div>{""}</div> : <div>{""}</div>}</div>}
+                                                </div>}</div>)
+                                             }
+
+
+
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <th>Url:</th><td><a href="{post.url}">{posts[0].url}</a></td>
+                                       </tr>
+                                       <tr>
+                                          <th>Permanent Link:</th><td>{<a href={'/' + posts[0].hash + '/' + posts[0].code} >https://hashcrow.click/{posts[0].hash + '/' + posts[0].code}</a>}</td>
+                                       </tr>
+                                       <tr>
+                                          <th>Created Date:</th><td>{posts[0].created_date}</td>
+                                       </tr>
