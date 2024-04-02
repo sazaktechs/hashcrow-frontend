@@ -20,3 +20,5 @@ build/
 # Other generated or temporary files
 .DS_Store
 Thumbs.db
+
+package-lock.json

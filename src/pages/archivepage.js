@@ -245,7 +245,7 @@ const ArchivePage = () => {
                   <div class="main-content">
                      <div className="paragraph">
                         <p className="paragraph1">Web content that is available today may
-                           disappear tomorrow. Archive securely with Hashcrow now!</p>
+                           disappear tomorrow. Archive securely with HashCrow now!</p>
                      </div>
 
                      <div className="form">
