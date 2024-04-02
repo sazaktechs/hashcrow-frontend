@@ -22,5 +22,5 @@ jobs:
       - name: Build and deploy
         run: |
           # Your build commands here
-
-          aws s3 cp build/ s3://your-bucket-name --recursive
+          npm run build
+          aws s3 sync build/ s3://hashcrow.click --recursive
