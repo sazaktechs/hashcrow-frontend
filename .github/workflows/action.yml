@@ -17,7 +17,9 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '20.11.1' # Set this to the Node.js version you are using
-
+    # Run
+    - name: Browserlist
+      run: npx update-browserslist-db@latest
     # Install dependencies
     - name: Install dependencies
       run: npm install
@@ -25,6 +27,7 @@ jobs:
     # Build the React project
     - name: Build
       run: npm run build
+      
 
     # More steps for deploying to AWS depending on the service 
     # you are using to deploy the app (e.g., S3, Elastic Beanstalk, Amplify)
