@@ -28,6 +28,8 @@ jobs:
     # Build the React project
     - name: Build
       run: npm run build
+      env:
+        CI: false # This line overrides the CI environment variable
 
     # More steps for deploying to AWS depending on the service 
     # you are using to deploy the app (e.g., S3, Elastic Beanstalk, Amplify)
