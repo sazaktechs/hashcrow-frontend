@@ -7,11 +7,11 @@ const Contact = () => {
     const [dropDownContent, setDropDownContent] = useState("dropdown-content-none");
 
     const changeDropDownContent = () => {
-        console.log("dropdown-test");
-        console.log(dropDownContent);
+        
+        
         if (dropDownContent == "dropdown-content-none") {
             setDropDownContent("dropdown-content");
-            console.log("dropdown");
+            
         }
         else {
             setDropDownContent("dropdown-content-none");

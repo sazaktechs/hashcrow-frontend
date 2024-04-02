@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Routes, Route, useParams }
 import ArchivePage from './pages/archivepage';
 import PageInfo from './pages/pageinfo';
 import RawPage from './pages/rawpage'
-import Navbar from './components/Navbar';
 import About from './pages/about';
 import Contact from './pages/contact';
+import Navbar from './components/Navbar';
 const App = () => {
 
     return (

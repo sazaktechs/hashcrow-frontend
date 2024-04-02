@@ -56,11 +56,11 @@ const PageInfo = () => {
 
 
    const changeDropDownContent = () => {
-      console.log("dropdown-test");
-      console.log(dropDownContent);
+      
+      
       if (dropDownContent == "dropdown-content-none") {
          setDropDownContent("dropdown-content");
-         console.log("dropdown");
+         
       }
       else {
          setDropDownContent("dropdown-content-none");
@@ -71,7 +71,6 @@ const PageInfo = () => {
       //showpage
       url = "https://api.hashcrow.click/list?hash=" + url_param.hash + "&code=" + url_param.code;
       setIsLoadingError(false);
-      // url = "http://localhost:8000/list?hash=" + url_param.hash + "&code=" + url_param.code;
 
       fetch(url)
          .then((response) => response.json())
@@ -91,35 +90,33 @@ const PageInfo = () => {
 
    const upToDate = async () => {
       //showpage
-      // url = "https://api.hashcrow.click/showpage?hash=" + hash + "&code=" + code;
       url = "https://api.hashcrow.click/check?hash=" + hash + "&url=" + posts[0].url;
-      // url = "http://localhost:8000/check?hash=" + hash + "&url=" + posts[0].url;
 
       setIsLoadingError(false);
       setState({ isLoading: true, Spinner2: true })
       fetch(url)
          .then((response2) => response2.json())
          .then((response2) => {
-            console.log(response2);
+            
             setPosts2(response2);
          }
          )
          .catch((err) => {
-            console.log("up-to-date error!");
+            
             setIsLoadingError(true)
          })
          .finally(() => {
             setState({ isLoading: true, Spinner2: false })
 
 
-            console.log("test");
+            
 
 
             if (posts2[0].current === "Old!") {
-               console.log("old");
+               
                setIsUpToDate("Old!");
             } else if (posts2[0].current === "up-to-date") {
-               console.log("up-to-date");
+               
                setIsUpToDate("up-to-date");
             }
          });
@@ -129,21 +126,6 @@ const PageInfo = () => {
       setIsUpToDate("Old!");
    };
 
-   // Cleanup function to reset data after each fetch call
-   // React.useEffect(() => {
-   //    return () => {
-   //       setPosts2(null);
-   //    };
-   // }, []);
-
-   // const downloadTxtFile = (e) => {
-   //    e.preventDefault();
-   //    const element = document.createElement("a");
-   //    const file = new Blob([posts[0].html]);
-   //    element.href = URL.createObjectURL(file);
-   //    element.download = posts[0].hash + ".html";
-   //    element.click();
-   // };
 
    const downloadTxtFile = (e) => {
       e.preventDefault();
@@ -222,14 +204,14 @@ const PageInfo = () => {
                      </div>
                   </div>
                </div>
-               <div className='main-container-pageinfo'>  {/* className="main-container" */}
+               <div className='main-container-pageinfo'>  
                   <div class="main-content-pageinfo">
 
                      {
                         useEffect(
                            () => {
                               pageInfo(url_param);
-                              // setState({ Spinner: true })
+
                            }, []
                         )
                      }
@@ -265,7 +247,7 @@ const PageInfo = () => {
 
                               <div className="page-info">
                                  <div className='table-container'>
-                                    {/* <tr className='table-header'>Snapshot Info</tr> */}
+                                    
                                     <table className='page-info-table'>
                                        <tr>
                                           <th className="snapshot-version-header">Snapshot Version:</th>
@@ -281,7 +263,6 @@ const PageInfo = () => {
                                           <td>
 
                                              {
-
                                                 (isLoading.Spinner2) ?
 
                                                    <div className="spinner-page-info">
@@ -303,31 +284,12 @@ const PageInfo = () => {
                                              }
 
                                              {
-                                                // (posts2.length !== 0 && !isLoading.Spinner2) ?
                                                    (posts2.length !== 0 && !isLoading.Spinner2) ?
                                                    (posts2[0].current === "Old!")
                                                       ? <div className='xmark'>{xmark}</div>
                                                       : <div className='check'>{check}</div>
                                                    : <div></div>
                                              }
-
-                                             {/* {
-                                                (posts2.length !== 0) ? (<ComponentToRender posts2={posts2} xmark={xmark} check={check} />) : <div></div>
-                                             } */}
-
-                                             {/* {(isLoading.Spinner2) ? null : <div>{changeIsUpToDate}</div> } */}
-
-                                             {/* {
-                                                // (isLoading.Spinner2) ? null : 
-                                                // (isUpToDate === null) ? <div>123456</div> : 
-                                                // (isUpToDate === "Old!") ? <div className="xmark">{xmark}</div> : 
-                                                // (isUpToDate === "up-to-date") ? <div className='check'>{check}</div> : 
-                                                // (isUpToDate === "empty") ? null : null
-                                                
-                                                (isUpToDate != null ? <div>AAAAAAA</div> : <div>BBBBBBBBB</div>)
-                                             } */}
-
-
 
                                           </td>
                                           <td><a href={posts[0].url}>{posts[0].url}</a></td>
@@ -366,17 +328,8 @@ const PageInfo = () => {
                                                    : null
                                              }
 
-                                             {/* {old} */}
-
-                                             {/* {
-                                                (isLoading.Spinner2) ? null : (<div>{(isUpToDate === "Old!") ? <div className="xmark">{xmark}</div> : <div>
-                                                   {(isUpToDate === "up-to-date") ? <div className='check'>{check}</div> : <div>
-                                                      {(isUpToDate === "empty") ? <div>{""}</div> : <div>{""}</div>}</div>}
-                                                </div>}</div>)
-                                             } */}
-
                                              {
-                                                // (posts2.length !== 0 && !isLoading.Spinner2) ?
+                                                
                                                    (posts2.length !== 0 && !isLoading.Spinner2) ?
                                                    (posts2[0].current === "Old!")
                                                       ? <div className='xmark'>{xmark}</div>
@@ -413,39 +366,6 @@ const PageInfo = () => {
 
                               </div>
 
-                              {/* <div className="archived-page page-info">
-                                 <div className='table-container'>
-                                    <tr className='table-header'>All Snapshots</tr>
-                                    <table className='all-version-table'>
-                                       {
-                                          posts[1].map((post) => {
-                                             return (
-                                                <div className="mt-5" key={post.hash}>
-                                                   <tr>
-                                                      <th>Version {counter++}</th>
-                                                   </tr>
-                                                   <tr>
-                                                      <td>{<a href={'/' + posts[0].hash + '/' + posts[0].code} >https://hashcrow.click/{posts[0].hash + '/' + posts[0].code}</a>}</td>
-                                                   </tr>
-                                                   <tr>
-                                                      <th>Created Date</th>
-                                                   </tr>
-                                                   {post['content'].map((post2) => {
-                                                      return (
-                                                         <tr>
-                                                            <td>{post2.created_date}</td>
-                                                         </tr>
-                                                      );
-                                                   })}
-
-                                                   <br></br>
-                                                   <br></br>
-                                                </div>
-                                             );
-                                          })}
-                                    </table>
-                                 </div>
-                              </div> */}
                            </div>
 
                            : null
@@ -474,26 +394,8 @@ const PageInfo = () => {
             <iframe style={{ width: "100%", height: "1000px" }} src={src2} title="description"></iframe>
          </>
 
-         {/* <footer className="about-body-footer">
-            <a target="_blank" href="https://www.linkedin.com/company/sazaktechs/">Copyright ©  SazakTechs</a>
-         </footer> */}
       </div >
    );
 };
-
-// const ComponentToRender = ({ posts2, xmark, check }) => {
-//    // Use the data to render your component
-//    return (
-//       <div>
-//          {
-//             (posts2 !== null) ?
-//                (posts2 === "Old!") ?
-//                   <div className='xmark'>{xmark}</div> 
-//                : <div className='check'>{check}</div> 
-//             : <div>No data fetched yet</div>
-//          }
-//       </div>
-//    );
-// };
 
 export default PageInfo;

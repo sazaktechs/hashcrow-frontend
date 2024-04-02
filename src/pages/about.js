@@ -7,11 +7,11 @@ const About = () => {
     const [dropDownContent, setDropDownContent] = useState("dropdown-content-none");
 
     const changeDropDownContent = () => {
-        console.log("dropdown-test");
-        console.log(dropDownContent);
+        
+        
         if (dropDownContent == "dropdown-content-none") {
             setDropDownContent("dropdown-content");
-            console.log("dropdown");
+            
         }
         else {
             setDropDownContent("dropdown-content-none");
@@ -55,7 +55,6 @@ const About = () => {
 
                             <h2>User-Friendly Experience</h2>
                             <p>With HashCrow, users have the flexibility to download the archived snapshot as a single HTML page or explore the raw page directly. Whether you're preserving valuable online resources for research, documentation, or historical purposes, HashCrow is here to safeguard your web content efficiently and securely.</p>
-
 
                         </div>
                     </div>
