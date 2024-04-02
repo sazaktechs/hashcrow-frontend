@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Hashcrow Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the frontend repository of Hashcrow, a sleek and user-friendly web interface built with React that interacts with the Hashcrow API. This React application provides a convenient way for users to archive URLs, verify content integrity, and manage archived web pages through a simple and intuitive web interface.
 
-## Available Scripts
+## Features:
 
-In the project directory, you can run:
+- Interact with the Hashcrow API to archive URLs with SHA256 hash.
+- A modern, responsive UI built with React.
+- Capability to check if an archived URL's content is up-to-date.
+- View detailed information about each archived web page snapshot.
+- List all versions of archived URLs.
 
-### `npm start`
+## Getting Started:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run the Hashcrow frontend on your local machine, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites:
 
-### `npm test`
+Ensure you have the following installed:
+- Node.js
+- npm or Yarn (npm comes with Node.js)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation:
 
-### `npm run build`
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/sazaktechs/hashcrow-frontend.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd hashcrow-frontend
+   ```
+3. Install the dependencies:
+   ```sh
+   npm install
+   ```
+   or if you're using Yarn:
+   ```sh
+   yarn install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Running the Project:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Once the installation is complete, you can start the project by running:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+npm start
+```
 
-### `npm run eject`
+or if you're using Yarn:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```sh
+yarn start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This command runs the app in the development mode and will automatically open `http://localhost:3000` in your default web browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Available Scripts:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In the project directory, you can run several scripts:
 
-## Learn More
+- `npm start` or `yarn start` - Runs the app in development mode.
+- `npm test` or `yarn test` - Launches the test runner in interactive watch mode.
+- `npm build` or `yarn build` - Builds the app for production to the `build` folder.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+We welcome contributions from the community. Whether it's fixing bugs, improving the documentation, or adding new features, your help is appreciated.
 
-### Code Splitting
+To contribute, fork this repository, make your changes, and submit a pull request with a clear description of what your changes are.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Support:
 
-### Analyzing the Bundle Size
+If you encounter any issues or require assistance, please open an issue on the GitHub repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License:
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. Please refer to the `LICENSE` file for more information.
