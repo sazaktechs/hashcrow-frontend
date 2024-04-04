@@ -75,4 +75,4 @@ If you encounter any issues or require assistance, please open an issue on the G
 
 ## License:
 
-This project is licensed under the MIT License. Please refer to the `LICENSE` file for more information.
+This project is licensed under the MIT License. Please refer to the [LICENSE](LICENSE) file for more information.
