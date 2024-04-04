@@ -69,7 +69,7 @@ const PageInfo = () => {
 
    const pageInfo = async (url_param) => {
       //showpage
-      url = "https://api.hashcrow.click/list?hash=" + url_param.hash + "&code=" + url_param.code;
+      url = "https://api.hashcrow.click/snapshot_info?hash=" + url_param.hash + "&code=" + url_param.code;
       setIsLoadingError(false);
 
       fetch(url)
