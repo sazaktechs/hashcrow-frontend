@@ -9,10 +9,10 @@ import logo from "../hashcrow192.png";
 const bars = <FontAwesomeIcon icon={faBars} />
 
 const RawPage = () => {
-
+    const s3Url = process.env.REACT_APP_S3_URL;
     let { hash } = useParams();
 
-    var src2 = "https://hashed-web-page-files.s3.us-west-2.amazonaws.com/" + hash + ".html"
+    var src2 = s3Url + hash + ".html"
 
     return (
 

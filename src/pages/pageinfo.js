@@ -17,6 +17,9 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 const PageInfo = () => {
 
+   const s3Url = process.env.REACT_APP_S3_URL;
+   const apiUrl = process.env.REACT_APP_API_URL;
+
    const element = <FontAwesomeIcon icon={faMagnifyingGlass} />
    const bars = <FontAwesomeIcon icon={faBars} />
    const question = <FontAwesomeIcon icon={faQuestion} />
@@ -52,7 +55,7 @@ const PageInfo = () => {
 
    const [dropDownContent, setDropDownContent] = useState("dropdown-content-none");
 
-   var src2 = "https://hashed-web-page-files.s3.us-west-2.amazonaws.com/" + hash + ".html"
+   var src2 = s3Url + hash + ".html"
 
 
    const changeDropDownContent = () => {
@@ -69,7 +72,7 @@ const PageInfo = () => {
 
    const pageInfo = async (url_param) => {
       //showpage
-      url = "https://api.hashcrow.click/snapshot_info?hash=" + url_param.hash + "&code=" + url_param.code;
+      url = apiUrl + "/snapshot_info?hash=" + url_param.hash + "&code=" + url_param.code;
       setIsLoadingError(false);
 
       fetch(url)
@@ -90,7 +93,7 @@ const PageInfo = () => {
 
    const upToDate = async () => {
       //showpage
-      url = "https://api.hashcrow.click/check?hash=" + hash + "&url=" + posts[0].url;
+      url = apiUrl + "/check?hash=" + hash + "&url=" + posts[0].url;
 
       setIsLoadingError(false);
       setState({ isLoading: true, Spinner2: true })
@@ -131,7 +134,7 @@ const PageInfo = () => {
       e.preventDefault();
       // Disable download button
       disableDownloadButton();
-      fetch('https://hashed-web-page-files.s3.us-west-2.amazonaws.com/' + posts[0].hash + ".html", {
+      fetch(s3Url + posts[0].hash + ".html", {
          method: 'GET',
          headers: {
             'Content-Type': 'application/html',

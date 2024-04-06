@@ -6,6 +6,10 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const ArchivePage = () => {
+
+   const apiUrl = process.env.REACT_APP_API_URL;
+
+
    const element = <FontAwesomeIcon icon={faMagnifyingGlass} />
    const bars = <FontAwesomeIcon icon={faBars} />
    let counter = 1;
@@ -31,7 +35,8 @@ const ArchivePage = () => {
       }
    };
    const archivePage = async (urlTitle) => {
-      url = "https://api.hashcrow.click/hashurl?url=" + urlTitle;
+      url = apiUrl + "/hashurl?url=" + urlTitle;
+      console.log(url);
       fetch(url)
          .then((response) => response.json())
          .then((response) => {
@@ -50,7 +55,7 @@ const ArchivePage = () => {
          });
    };
    const listPages = async (urlTitle) => {
-      url = "https://api.hashcrow.click/listpages?url=" + urlTitle;
+      url = apiUrl + "/listpages?url=" + urlTitle;
       fetch(url)
          .then((response) => response.json())
          .then((response) => {
@@ -88,7 +93,7 @@ const ArchivePage = () => {
    };
    const downloadTxtFile = (e) => {
       e.preventDefault();
-      fetch('https://hashed-web-page-files.s3.us-west-2.amazonaws.com/' + posts[0].hash + ".html", {
+      fetch( + posts[0].hash + ".html", {
          method: 'GET',
          headers: {
             'Content-Type': 'application/html',
