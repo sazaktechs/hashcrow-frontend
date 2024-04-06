@@ -5,6 +5,10 @@ on:
     branches:
       - main  # Set this to the branch from which you want to deploy
 
+env:
+  REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+  REACT_APP_S3_URL: ${{ secrets.REACT_APP_S3_URL }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
