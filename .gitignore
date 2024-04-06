@@ -7,7 +7,7 @@ build/
 *.log
 
 # Environment-specific configuration files
-#.env
+.env
 .env.local
 .env.*.local
 
